@@ -10,19 +10,19 @@ For cpp version, first you need to build the governor.
 ### Linux device
 If the target device is linux, compile it with g++ :
 ```
-g++ Governor.cpp -o Governor
-chmod +x Governor
+$ g++ Governor.cpp -o Governor
+$ chmod +x Governor
 ```
 
 ### Android device
 Ff the target device is android you need to cross compile it using clang++ in linux and then push the binary into the android device:
 ```
-arm-linux-androideabi-clang++ Governor.cpp -o Governor
-adb push Governor dir_inside_bord/
+$ arm-linux-androideabi-clang++ Governor.cpp -o Governor
+$ adb push Governor dir_inside_bord/
 ```
 The *Build_CPP.sh* script sets the path, compiles the governor and push it into the android device:
 ```
-./Build_CPP.sh Governor.cpp
+$ ./Build_CPP.sh Governor.cpp
 ```
 You need to define Android-NDK path in your machine into the *Android-NDK* variable and also change the path in your android device based on your desire. 
 
@@ -31,5 +31,5 @@ You need to define Android-NDK path in your machine into the *Android-NDK* varia
 This governor takes four input arguments: target CNN (*Graph*), the number of total partitioning parts in this graph (*TotalParts*),
 target FPS (*TargetFPS*), and target latency (*TargetLatency*) in the main function.
 ```
-./Governor Graph #TotalParts #TargetFPS #TargetLatency
+$ ./Governor Graph #TotalParts #TargetFPS #TargetLatency
 ```
