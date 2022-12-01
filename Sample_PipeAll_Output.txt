@@ -1,0 +1,50 @@
+
+./graph_alexnet_all_pipe_sync
+
+Threads : 4
+Small Cores Threads : 2
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Image file : 
+Labels file : transfer_wait
+Partition point is : 2
+Second partition point is : 5
+Order is : L-G-B
+Total number of cores is : 6
+Run network for 10 times.
+
+First partition point:2
+Second partition point:5
+Total parts:8
+
+
+
+stage1_input_time: 0.0015791 ms
+stage1_inference_time: 151.221 ms
+stage1_total_time: 151.222 ms
+
+
+stage2_input_time: 98.6479 ms
+stage2_inference_time: 38.7687 ms
+stage2_total_time: 137.417 ms
+
+
+stage3_input_time: 58.6773 ms
+stage3_inference_time: 80.313 ms
+stage3_total_time: 138.99 ms
+
+************************************************
+
+Frame rate is: 6.61279 FPS
+Frame latency is: 427.629 ms
+
+************************************************
+
+Test passed
