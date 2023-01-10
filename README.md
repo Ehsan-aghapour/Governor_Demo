@@ -10,7 +10,7 @@ For cpp version, first you need to build the governor.
 ### Linux device
 If the target device is linux, compile it with g++ :
 ```
-$ g++ Governor.cpp -o Governor
+$ g++ -static-libstdc++ Governor.cpp -o Governor
 $ chmod +x Governor
 ```
 
