@@ -5,7 +5,7 @@ export PATH="${Bin_Dir}:$PATH"
 
 Target_Compiler=armv7a-linux-androideabi23-clang++
 Compiler=arm-linux-androideabi-clang++
-cp ${Bin_Dir}/${Target_Compiler} ${Bin_Dir}/${Compiler}
+cp ${Bin_Dir}/${Target_Compiler} -static-libstdc++ ${Bin_Dir}/${Compiler}
 
 
 
