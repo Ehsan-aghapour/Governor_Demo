@@ -17,7 +17,7 @@ $ chmod +x Governor
 ### Android device
 If the target device is android you need to cross compile it using clang++ in linux and then push the binary into the android device:
 ```
-$ arm-linux-androideabi-clang++ Governor.cpp -o Governor
+$ arm-linux-androideabi-clang++ -static-libstdc++ Governor.cpp -o Governor
 $ adb push Governor dir_inside_bord/
 ```
 The *Build_CPP.sh* script sets the path, compiles the governor and push it into the android device:
