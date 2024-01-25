@@ -173,8 +173,8 @@ int main (int argc, char *argv[])
 	string Order="L-G-B";
 	while(true){
 		char Run_Command[150];		
-		sprintf(Run_Command,"./%s --threads=4 --threads2=2 --target=NEON --n=%d --partition_point=%d --partition_point2=%d --order=%s > output.txt",
-		graph.c_str(), N_Frames, PartitionPoint1, PartitionPoint2, Order.c_str());
+		sprintf(Run_Command, "./%s --threads=4 --threads2=2 --target=NEON --n=%d --partition_point=%d --partition_point2=%d --order=%s > output.txt 2>&1",
+        graph.c_str(), N_Frames, PartitionPoint1, PartitionPoint2, Order.c_str());
 		system(Run_Command);
 		ParseResults();
 		if ( FPSCondition && LatencyCondition ){//Both Latency and Throughput Requirements are Met.
